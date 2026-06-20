@@ -1,0 +1,101 @@
+/* ==========================================
+   1. ACCESSIBILITY (SKIP TO MAIN CONTENT)
+   ========================================== */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 10px;
+  background: #222222;
+  color: #ffffff;
+  padding: 10px 15px;
+  z-index: 999;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #ffffff;
+}
+
+.skip-link:focus {
+  top: 10px; /* Xuất hiện khi người dùng nhấn phím Tab */
+}
+
+/* ==========================================
+   2. NAVIGATION & HEADER
+   ========================================== */
+/* Yêu cầu: Nhận xét (comment) kiểu dáng cũ của phần tử li (nếu có) */
+/* li {
+  display: inline;
+  margin-right: 15px;
+} 
+*/
+
+/* Yêu cầu: Sửa đổi nav để sử dụng khối nội tuyến (inline-block) và rộng 80% */
+nav {
+  display: inline-block;
+  width: 80%;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #0056b3;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Yêu cầu: Sử dụng bộ chọn hậu duệ để chỉ định dạng ảnh trong nav rộng khoảng 10% */
+nav img {
+  width: 10%;
+  height: auto;
+}
+
+/* ==========================================
+   3. GRID LAYOUT (.grid)
+   ========================================== */
+/* Yêu cầu: Lưới 2 cột, mỗi cột xấp xỉ 40%. Thêm justify-content, align-items, và row-gap */
+.grid {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: space-around; /* Căn đều khoảng cách giữa và hai bên cột */
+  align-items: center;           /* Căn giữa các phần tử theo chiều dọc */
+  row-gap: 25px;                 /* Khoảng cách giữa các hàng */
+  margin: 20px 0;
+}
+
+/* Yêu cầu: Bộ chọn hậu duệ chỉ tạo kiểu cho hình ảnh TRONG lớp grid rộng 100% */
+.grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================
+   4. FLEXBOX LAYOUT (.flex)
+   ========================================== */
+/* Yêu cầu: Định dạng lớp flex sử dụng flex, flex-wrap và justify-content */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Căn đều các phần tử flex */
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.flex-item {
+  flex: 1 1 30%; /* Co giãn linh hoạt, chiếm khoảng 30% chiều rộng */
+  background-color: #f8f9fa;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
